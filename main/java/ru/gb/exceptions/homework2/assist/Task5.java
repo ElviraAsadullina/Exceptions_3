@@ -1,4 +1,4 @@
-package ru.gb.exceptions;
+package ru.gb.exceptions.homework2.assist;
 
 /** Строки, состоящие из последовательностей цифр, формируются следующим образом.
  * Первая строка состоит из четырех единиц. Каждая из последующих строк создается следующим действием:
@@ -7,22 +7,35 @@ package ru.gb.exceptions;
  * (1) 1 1 1 1
  * (2) 12 12 12 12
  * (3) 1223 1223 1223 1223
+ *
+ * [0, 0,  0, 0, 0, 0, 0],
+ * [4, 4,  0, 0, 0, 0, 0],
+ * [4, 8,  4, 0, 0, 0, 0],
+ * [4, 12, 12, 4, 0, 0, 0],
+ * [4, 16, 24, 16, 4, 0, 0],
+ * [4, 20, 40, 40, 20, 4, 0],
+ * [4, 24, 60, 80, 60, 24, 4],
+ * [4, 28, 84, 140, 140, 84, 28],
+ * [4, 32, 112, 224, 280, 224, 112]
+ *
  * Сколько цифр 5 и сколько цифр 7 будет в строке с номером (9)? В ответе укажите через пробел два
  * целых числа: сначала количество цифр 5 в девятой строке, а затем количество цифр 7 в девятой строке.*/
+
 public class Task5 {
     public static void main(String[] args) {
         Task5 task5 = new Task5();
         int[][] myArray = task5.constructArray(9, 7);
         System.out.println(myArray[8][4] + " " + myArray[8][6]);
+//        System.out.println(Arrays.deepToString(myArray));
     }
     public int[][] constructArray(int i, int j) {
         int[][] array = new int[i][j];
         for (i = 0; i < array.length; i++) {
             for (j = 0; j < array[i].length; j++) {
-                if (i < 1) {
-                    array[i][j] = 0;
-                } else if (j == 0 || i == j) {
+                if (j == 0 || i == j) {
                     array[i][j] = 4;
+                } else if (i < 1) {
+                    array[i][j] = 0;
                 } else {
                     array[i][j] = array[i - 1][j] + array[i - 1][j - 1];
                 }

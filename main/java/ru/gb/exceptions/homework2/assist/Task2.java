@@ -1,4 +1,4 @@
-package ru.gb.exceptions;
+package ru.gb.exceptions.homework2.assist;
 
 /**  Если необходимо, исправьте данный код. */
 

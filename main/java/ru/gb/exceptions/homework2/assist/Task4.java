@@ -1,6 +1,4 @@
-package ru.gb.exceptions;
-
-import ru.gb.exceptions.assist.ANSIConstants;
+package ru.gb.exceptions.homework2.assist;
 
 import java.io.BufferedReader;
 import java.io.IOException;

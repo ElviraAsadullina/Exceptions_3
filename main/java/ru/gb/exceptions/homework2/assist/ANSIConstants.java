@@ -1,4 +1,4 @@
-package ru.gb.exceptions.assist;
+package ru.gb.exceptions.homework2.assist;
 
 public class ANSIConstants {
     public static final String ANSI_RESET = "\u001B[0m";
