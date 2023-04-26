@@ -83,7 +83,7 @@ public class LoginFrame extends JFrame implements ActionListener {
             pwdText = passwordField.getText();
             confPwdText = confirmPasswordField.getText();
             if (dataValidate(userText, pwdText, confPwdText).getBool()) {
-                JOptionPane.showMessageDialog(this, "       Login Successful !");
+                JOptionPane.showMessageDialog(this, "       Logged in Successfully !");
                 System.exit(0);
             } else {
                 JOptionPane.showMessageDialog(this, dataValidate
