@@ -19,16 +19,16 @@ public class DataValidate {
                 throw new WrongLoginException("Invalid symbols in Login folder!");
             }
             if (login.length() > 19) {
-                throw new WrongLoginException("Login is too long!");
+                throw new WrongLoginException("        Login is too long!");
             }
             if (!passwordMatcher.matches()) {
                 throw new WrongPasswordException("Invalid symbols in Password folder!");
             }
             if (password.length() > 19) {
-                throw new WrongPasswordException("Password is too long!");
+                throw new WrongPasswordException("     Password is too long!");
             }
             if (!password.equals(confirmPassword)) {
-                throw new WrongPasswordException("Password confirm failed!");
+                throw new WrongPasswordException(" Password confirm failed!");
             }
         } catch (WrongPasswordException | WrongLoginException exception) {
             bv.setBool(false);
