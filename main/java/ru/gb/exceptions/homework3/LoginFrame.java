@@ -95,6 +95,7 @@ public class LoginFrame extends JFrame implements ActionListener {
             passwordField.setText("");
             confirmPasswordField.setText("");
             showPassword.setSelected(false);
+            passwordField.setEchoChar('*');
         }
         if (e.getSource() == showPassword) {
             if (showPassword.isSelected()) {
